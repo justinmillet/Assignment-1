@@ -8,14 +8,12 @@
 from static_array import StaticArray
 
 
-def min_max(arr: StaticArray) -> ():
-    if StaticArray.length(arr) == 0:
-        return None, None
-    min_value = arr[0]
-    max_value = arr[0]
-    for i in range (StaticArray.length(arr)):
+def min_max(arr: StaticArray) -> tuple:
+    min_value = arr[0]  # sets first value as minimum value
+    max_value = arr[0]  # sets first value as maximum value
+    for i in range(StaticArray.length(arr)):  # iterates through the array
         if min_value > arr[i]:
-            min_value = arr[i]
+            min_value = arr[i]  # determines if the number is minimum by reviewing against first number
         if max_value < arr[i]:
-            max_value = arr[i]
-    return min_value, max_value
+            max_value = arr[i]  # determines if the number is maximum by reviewing against first number
+    return min_value, max_value  # returns the minimum and maximum
