@@ -18,11 +18,3 @@ def fizz_buzz(arr: StaticArray) -> StaticArray:
         elif num % 5 == 0:
             result[i] = "buzz"
     return result
-
-
-source = [_ for _ in range(-5, 20, 4)]
-arr = StaticArray(len(source))
-for i, value in enumerate(source):
-    arr[i] = value
-print(fizz_buzz(arr))
-print(arr)
