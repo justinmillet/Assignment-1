@@ -5,22 +5,17 @@
 # Date: 4/24/2023
 # Description: Write a function that when given an array, it returns the minimum and maximum values
 
-
-import random
-from static_array import *
+from static_array import StaticArray
 
 
-def Min_Max(arr):
-    # Assign the first value of array to min and max variable
-    min = arr[0]
-    max = arr[0]
-    # traverse the array
-    for i in arr:
-        # if the current element is less than min than change min value to current value
-        if (min > i):
-            min = i
-        # if the current element is greater than max than change max value to current value
-        if max < i:
-            max = i
-    # return the min and max value
-    return (min, max)
+def min_max(arr: StaticArray) -> ():
+    if StaticArray.length(arr) == 0:
+        return None, None
+    min_value = arr[0]
+    max_value = arr[0]
+    for i in range (StaticArray.length(arr)):
+        if min_value > arr[i]:
+            min_value = arr[i]
+        if max_value < arr[i]:
+            max_value = arr[i]
+    return min_value, max_value
